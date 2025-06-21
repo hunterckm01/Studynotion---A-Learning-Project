@@ -1,9 +1,9 @@
-const BACKEND_URL = "http://localhost:4000/api/v1"
+const BACKEND_URL = import.meta.env.VITE_APP_BACKEND_URL;
 
 //AUTH ENDPOINTS
 export const authEndpoints = {
   SENDOTP_API: BACKEND_URL + "/auth/sendotp",
-  SIGNUP_API: BACKEND_URL +  "/auth/signup",
+  SIGNUP_API: BACKEND_URL + "/auth/signup",
   LOGIN_API: BACKEND_URL + "/auth/login",
   RESETPASSTOKEN_API: BACKEND_URL + "/auth/reset-password-token",
   RESETPASSWORD_API: BACKEND_URL + "/auth/reset-password",
@@ -11,17 +11,18 @@ export const authEndpoints = {
 
 //PROFILE ENDPOINTS
 export const profileEndpoints = {
-    GET_USER_DETAILS_API: BACKEND_URL + "/profile/getUserDetails",
-    GET_USER_ENROLLED_COURSES_API: BACKEND_URL + "/profile/getEnrolledCourses",
-    GET_INSTRUCTOR_DATA_API: BACKEND_URL + "/profile/instructorDashboard"
-}
+  GET_USER_DETAILS_API: BACKEND_URL + "/profile/getUserDetails",
+  GET_USER_ENROLLED_COURSES_API: BACKEND_URL + "/profile/getEnrolledCourses",
+  GET_INSTRUCTOR_DATA_API: BACKEND_URL + "/profile/instructorDashboard",
+};
 
 //STUDENTS ENDPOINTS
 export const studentEndpoints = {
-    COURSE_PAYMENT_API: BACKEND_URL + "/payment/capturePayment",
-    COURSE_VERIFY_API: BACKEND_URL + "/payment/verifyPayment",
-    SEND_PAYMENT_SUCCESS_EMAIL_API: BACKEND_URL + "/payment/sendPaymentSuccessEmail"
-}
+  COURSE_PAYMENT_API: BACKEND_URL + "/payment/capturePayment",
+  COURSE_VERIFY_API: BACKEND_URL + "/payment/verifyPayment",
+  SEND_PAYMENT_SUCCESS_EMAIL_API:
+    BACKEND_URL + "/payment/sendPaymentSuccessEmail",
+};
 
 //COURSE ENDPOINTS
 export const courseEndpoints = {
@@ -47,18 +48,18 @@ export const courseEndpoints = {
 
 //RATINGS AND REVIEWS
 export const ratingsEndpoints = {
-    REVIEWS_DETAILS_API: BACKEND_URL + "/course/getReviews"
-}
+  REVIEWS_DETAILS_API: BACKEND_URL + "/course/getReviews",
+};
 
 //CATEGORIES API
 export const categories = {
-    CATEGORIES_API: BACKEND_URL + "/course/showAllCategories"
-}
+  CATEGORIES_API: BACKEND_URL + "/course/showAllCategories",
+};
 
 //CATALOG PAGE DATA
 export const catalogData = {
-    CATALOGPAGEDATA_API: BACKEND_URL + "/course/getCategoryPageDetails"
-}
+  CATALOGPAGEDATA_API: BACKEND_URL + "/course/getCategoryPageDetails",
+};
 
 //CONTACT US API
 // export const contactusEndpoints = {
@@ -67,8 +68,8 @@ export const catalogData = {
 
 //SETTINGS PAGE API
 export const settingsEndpoints = {
-    UPDATE_DISPLAY_PICTURE_API: BACKEND_URL + "/profile/updateDisplayPicture",
-    UPDATE_PROFILE_API: BACKEND_URL + "/profile/updateProfile",
-    CHANGE_PASSWORD_API: BACKEND_URL + "/auth/changepassword",
-    DELETE_PROFILE_API: BACKEND_URL + "/profile/deleteProfile"
-}
+  UPDATE_DISPLAY_PICTURE_API: BACKEND_URL + "/profile/updateDisplayPicture",
+  UPDATE_PROFILE_API: BACKEND_URL + "/profile/updateProfile",
+  CHANGE_PASSWORD_API: BACKEND_URL + "/auth/changepassword",
+  DELETE_PROFILE_API: BACKEND_URL + "/profile/deleteProfile",
+};

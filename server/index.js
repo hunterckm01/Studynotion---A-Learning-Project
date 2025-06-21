@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+
+
 const userRoutes = require('./routes/User');
 const profileRoutes = require('./routes/Profile');
 const paymentRoutes = require('./routes/Payments');
@@ -12,6 +14,10 @@ const cors = require("cors");
 const {cloudinaryConnect} = require('./config/cloudinary');
 const fileUpload = require("express-fileupload");
 const dotenv = require('dotenv');
+
+const FRONTEND_URL = process.env.VITE_APP_BASE_URL ;
+// console.log(FRONTEND_URL);
+// console.log("Frontend url is", process.env.FRONTEND_URL);
 
 dotenv.config();
 const PORT = process.env.PORT  ;
@@ -26,7 +32,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: FRONTEND_URL,
     credentials: true,
   })
 );
