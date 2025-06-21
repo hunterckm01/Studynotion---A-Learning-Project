@@ -1,6 +1,6 @@
 import React from 'react'
 import HighlightText from './HighlightText'
-import know_your_progress from '../../../assets/Images/know_your_progress.svg'
+import know_your_progress from '../../../assets/Images/Know_your_progress.svg'
 import compare_with_others from "../../../assets/Images/Compare_with_others.svg";
 import plan_your_lesson from "../../../assets/Images/Plan_your_lessons.svg";
 import CTAButton from './Button';
