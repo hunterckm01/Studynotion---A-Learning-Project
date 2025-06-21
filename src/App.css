@@ -1,0 +1,58 @@
+html, body {
+    overflow-x: hidden ;
+}
+
+.homepage_bg{
+    background: url('./assets/Images/bghome.svg')
+}
+
+.label-style {
+    font-size: 14px;
+    color: #F1F2FF ;
+}
+
+.form-style {
+    border-radius: 8px ;
+    background-color: #2C333F;
+    padding: 12px ;
+    font-size: 16px ;
+    line-height: 24px;
+    color: #F1F2FF;
+    box-shadow: 0 1px 0 0 ;
+    box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.5);
+    ::placeholder{
+        color: #a3a3a3;
+    }
+    input:focus{
+        outline: none
+    }
+    /* @apply  shadow-  [0_1px_0_0] shadow-white/50 placeholder:text-richblack-400 focus:outline-none; */
+}
+
+input[type = number]{
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.blackButton {
+    cursor: pointer;
+    border-radius:8px ;
+    background-color: #161D29;
+    padding:20px 8px ;
+    font-weight: 600 ;
+    color: #F1F2FF;
+}
+
+.yellowButton {
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #161D29;
+    padding: 20px 8px;
+    font-weight: 600;
+    color: #F1F2FF;
+}
