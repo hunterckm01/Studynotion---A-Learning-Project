@@ -24,9 +24,11 @@ const Navbar = () => {
     setLoading(true)
     try {
       const result = await apiConnector("GET", categories.CATEGORIES_API);
-      // console.log(result);
+      // console.log("result got after fetching the links are", result);
       setSubLinks(result.data.data);
-      // console.log("sub links are", subLinks)
+
+      console.log("sub links are", subLinks)
+      console.log("sublinkes length is", subLinks.length)
     } catch (err) {
       console.log("Could not fetch the category list");
     }
@@ -38,11 +40,9 @@ const Navbar = () => {
     fetchSubLinks();
   },[])
 
-  // useEffect(() => {
-  //   // console.log("Sub links updated:", subLinks);
-  // }, [subLinks]);
-
-
+  useEffect(()=>{
+    console.log("sublinks are", subLinks)
+  },[subLinks])
 
   const location = useLocation();
 
