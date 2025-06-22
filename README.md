@@ -50,7 +50,3 @@ StudyNotion is a full-stack EdTech web application where users can explore, purc
 - Stripe (payment gateway)
 - JWT (auth & security)
 
----
-
-## 📂 Folder Structure
-
